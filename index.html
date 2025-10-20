@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generated Page</title>
+  <title>CodeShift</title>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CodeShift Team Introduction</title>
@@ -13,29 +13,42 @@
   <link rel="stylesheet" href="global.css">
   <style id="sections-styles">
 /* CSS for section section:header */
-.site-header {
-  background-color: var(--color-header-bg);
-  padding: 16px 0;
+.header-section {
+  padding: 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  background-color: var(--color-header-bg);
 }
-.main-nav ul {
+.header-top-bar {
+  height: 53px;
+  background-color: var(--color-bg);
+}
+.site-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 52px;
+  height: 57px;
 }
-.main-nav a {
+.main-nav {
+  display: flex;
+  gap: 52px;
   font-family: var(--font-ui);
   font-size: 18px;
+}
+.main-nav a {
   font-weight: 500;
   transition: color 0.3s;
 }
-.main-nav a:hover,
-.main-nav a.active {
+.main-nav a:hover, .main-nav a.active {
   font-weight: 700;
   color: var(--color-text);
+}
+@media (max-width: 480px) {
+  .main-nav {
+    gap: 24px;
+    font-size: 16px;
+  }
 }
 
 /* CSS for section section:hero */
@@ -224,8 +237,13 @@
   transform: rotate(-18.73deg);
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.18);
   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  position: relative;
+  z-index: 1;
 }
-.member-image-wrapper [class^="deco-"] { position: absolute; }
+.member-image-wrapper [class^="deco-"] {
+  position: absolute;
+  z-index: 0;
+}
 .deco-1 { top: -20px; left: 0px; }
 .deco-2 { top: 24px; left: 41px; }
 .deco-3 { top: 7px; right: 85px; }
@@ -256,6 +274,7 @@
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
+  margin-left: 120px;
 }
 .contact-item {
   display: flex;
@@ -312,20 +331,18 @@
   }
 }
   </style>
-  <script src="global.js" defer></script>
 </head>
 <body>
-<header id="section-header" class="site-header">
-  <div class="container">
+<section id="header" class="header-section">
+  <div class="header-top-bar"></div>
+  <header class="site-header container">
     <nav class="main-nav">
-      <ul>
-        <li><a href="#section-hero">Home</a></li>
-        <li><a href="#section-about" class="active">About us</a></li>
-        <li><a href="#section-contact">Contact</a></li>
-      </ul>
+      <a href="#section-hero">Home</a>
+      <a href="#section-about">About us</a>
+      <a href="#section-contact">Contact</a>
     </nav>
-  </div>
-</header>
+  </header>
+</section>
 <section id="section-hero" class="hero-section">
   <div class="hero-background"></div>
   <div class="container">
@@ -345,14 +362,14 @@
     </div>
     <div class="about-cards-grid">
       <article class="member-card">
-        <img class="member-card-photo" src="images/badb292f2958e16aef58782d9e56dd27e66b1ab6.png" alt="Photo of Guy Hawkins">
+        <img class="member-card-photo" src="images/badb292f2958e16aef58782d9e56dd27e66b1ab6.png" alt="Photo of Phan Quang Minh">
         <div class="member-card-content">
-          <h3 class="member-card-name">Guy Hawkins</h3>
+          <h3 class="member-card-name">Phan Quang Minh</h3>
           <p class="member-card-bio">
             <img src="images/I2_120_1_72.svg" alt="quote icon" class="quote-icon">
-            Aspiring UI/UX designer, passionate about crafting intuitive interfaces and exploring creative design solutions.
+            &nbsp;&nbsp;&nbsp;&nbsp;Aspiring UI/UX designer, passionate about crafting intuitive interfaces and exploring creative design solutions.
           </p>
-          <a href="#" class="member-card-arrow">
+          <a href="#pqminh" class="member-card-arrow">
             <img src="images/I2_120_1_66.svg" alt="arrow icon">
           </a>
         </div>
@@ -363,9 +380,9 @@
           <h3 class="member-card-name">Trần Anh Khoa</h3>
           <p class="member-card-bio">
             <img src="images/I0_233_1_91.svg" alt="quote icon" class="quote-icon">
-            Aspiring front-end developer, loves experimenting with layouts and improving the user experience.”
+            &nbsp;&nbsp;&nbsp;&nbsp;Aspiring front-end developer, loves experimenting with layouts and improving the user experience.
           </p>
-          <a href="#" class="member-card-arrow">
+          <a href="#takhoa" class="member-card-arrow">
             <img src="images/I0_233_1_92.svg" alt="arrow icon">
           </a>
         </div>
@@ -376,9 +393,9 @@
           <h3 class="member-card-name">Nguyễn Gia Nghi</h3>
           <p class="member-card-bio">
             <img src="images/I0_234_1_127.svg" alt="quote icon" class="quote-icon">
-            Front-end developer with a focus on creating smooth user experiences and clean design.”
+            &nbsp;&nbsp;&nbsp;&nbsp;Front-end developer with a focus on creating smooth user experiences and clean design.”
           </p>
-          <a href="#" class="member-card-arrow">
+          <a href="#ngnghi" class="member-card-arrow">
             <img src="images/I0_234_1_129.svg" alt="arrow icon">
           </a>
         </div>
@@ -393,7 +410,7 @@
       <img src="images/1_1469.svg" alt="decorative underline" />
     </div>
     <div class="members-list">
-      <article class="member-profile">
+      <article id="pqminh" class="member-profile">
         <div class="member-text">
           <h3 class="member-name">Phan Quang Minh</h3>
           <div class="name-underline"></div>
@@ -408,7 +425,7 @@
           <img class="deco-4" src="images/1_1452.svg" alt="decoration">
         </div>
       </article>
-      <article class="member-profile">
+      <article id="takhoa" class="member-profile">
         <div class="member-text align-right">
           <h3 class="member-name">Trần Anh Khoa</h3>
           <div class="name-underline"></div>
@@ -423,7 +440,7 @@
           <img class="deco-8" src="images/1_1454.svg" alt="decoration">
         </div>
       </article>
-      <article class="member-profile">
+      <article id="ngnghi" class="member-profile">
         <div class="member-text">
           <h3 class="member-name">Nguyễn Gia Nghi</h3>
           <div class="name-underline"></div>
@@ -471,7 +488,7 @@
   <div class="container">
     <div class="footer-content">
       <p class="copyright">© 2025 CodeShift – Web Development Course, HCMUS</p>
-      <a href="#section-header" class="back-to-top">Back to top</a>
+      <a href="#" class="back-to-top">Back to top</a>
     </div>
   </div>
 </footer>
