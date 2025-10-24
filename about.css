@@ -1,0 +1,51 @@
+.about-cards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.member-card {
+  width: 315px;
+  position: relative;
+}
+.member-card-photo {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.member-card-content {
+  background-color: #d7f0fa;
+  padding: 24px;
+  margin-top: -46px;
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  min-height: 274px;
+  display: flex;
+  flex-direction: column;
+}
+.member-card-name {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+.member-card-bio {
+  font-family: var(--font-secondary);
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+  position: relative;
+  padding-left: 10px;
+  flex-grow: 1;
+}
+.quote-icon {
+  position: absolute;
+  left: -10px;
+  top: 0;
+}
+.member-card-arrow {
+  align-self: flex-start;
+  margin-top: 20px;
+}
