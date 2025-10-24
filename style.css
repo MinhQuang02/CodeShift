@@ -304,8 +304,13 @@ section {
   transform: rotate(-18.73deg);
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.18);
   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  position: relative;
+  z-index: 1;
 }
-.member-image-wrapper [class^="deco-"] { position: absolute; }
+.member-image-wrapper [class^="deco-"] {
+  position: absolute;
+  z-index: 0;
+}
 .deco-1 { top: -20px; left: 0px; }
 .deco-2 { top: 24px; left: 41px; }
 .deco-3 { top: 7px; right: 85px; }
